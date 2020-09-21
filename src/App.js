@@ -69,7 +69,7 @@ const App = () => {
 				<div className='loader'></div>
 			</div>
 		);
-	}
+	};
 
 	return (
 		<div className='app-component'>
