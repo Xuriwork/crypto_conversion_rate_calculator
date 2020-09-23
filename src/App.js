@@ -6,7 +6,11 @@ const App = () => {
 
 	return (
 		<div className='app-component'>
-			<CryptoConversionCalculator />
+			<CryptoConversionCalculator
+				from={'USD'}
+				to={'BTC'}
+				partnerLink={'https://www.benzinga.com/go/uphold-crypto-convertor'}
+			/>
 		</div>
 	)
 

@@ -5,13 +5,13 @@ import CurrencyRate from './CurrencyRate';
 const CRYPTOCOMPARE_API = 'https://min-api.cryptocompare.com/data';
 const EXCHANGE_RATES_API = 'https://api.exchangeratesapi.io/latest';
 
-const CryptoConversionCalculator = () => {
+const CryptoConversionCalculator = ({ partnerLink, from, to }) => {
  
     const [loading, setLoading] = useState(true);
 
     const [currencies, setCurrencies] = useState([]);
-    const [fromCurrency, setFromCurrency] = useState('BTC');
-    const [toCurrency, setToCurrency] = useState('USD');
+    const [fromCurrency, setFromCurrency] = useState(from);
+    const [toCurrency, setToCurrency] = useState(to);
     const [exchangeRate, setExchangeRate] = useState();
     const [amount, setAmount] = useState(1);
     const [amountInFromCurrency, setAmountInFromCurrency] = useState(true);
@@ -92,7 +92,7 @@ const CryptoConversionCalculator = () => {
 					labelName='To'
 				/>
 				<a
-					href='https://www.benzinga.com/go/uphold-crypto-convertor'
+					href={partnerLink}
 					className='get-started-button'
 					rel='sponsored noopener noreferrer'
 					target='_blank'
