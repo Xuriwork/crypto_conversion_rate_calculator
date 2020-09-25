@@ -4,7 +4,7 @@ import SelectDropdownIcon from './assets/select.svg';
 const Input = ({ amount, onAmountChange, currency, onCurrencyChange, currencies, labelName }) => {
 	return (
         <>
-            <label for={labelName}>{labelName}</label>
+            <label htmlFor={labelName}>{labelName}</label>
             <div className='input-container'>
                 <input
                     type='number'
